@@ -67,38 +67,13 @@ The following indices are implemented by us:
 
 - **AAKD**: A variant of AKD that uses the heuristic of AIR.
 - **CGI+AAKD**: Our implementation combining CGI with AAKD.
-- **Irregular_CGI+AAKD**: Our implementation combining an irregular CGI grid with AAKD.
-- **Irregular_Grid**: Our implementation of an irregular grid index.
-- **Uniform_Grid**: Our implementation of a uniform grid index.
-
-
-## List of Competitor Indices
-This repository includes implementations of all indices that are compared against **skd-tree** in the experimental evaluation of the paper:
-- **kd-tree**
-- **R-tree**
-- **PH-tree**
-- **Adaptive Grid (AG)**
-- **Uniform Grid (UG)**
-- **Flood**
-- **IFI**
-
-The **kd-tree**, **R-tree**, **Uniform Grid (UG)**, **Flood** and **IFI** indices are adapted from the [learnedbench repository](https://github.com/qyliu-hkust/learnedbench).
-
-The **PH-tree** implementation is adapted from the [phtree-cpp repository](https://github.com/tzaeschke/phtree-cpp).
-
-The **Adaptive Grid (AG)** method is our own implementation, developed based on the **Uniform Grid (UG)** approach and using the splitting strategy of the **skd-tree**.
+- **Irregular CGI+AAKD**: Our implementation combining an irregular CGI grid with AAKD.
+- **Irregular Grid**: Our implementation of an irregular grid index.
+- **Uniform Grid**: Our implementation of a uniform grid index.
 
 ## Dependencies
-This project requires the following dependencies to build and run the experiments. Some are required for all indices, while others are specific to the **skd-tree** index.
-
-### General Dependencies (for all indices)
-- **Boost 1.79.0** - [Boost 1.79.0](https://www.boost.org/users/history/version_1_79_0.html)
-
-### Dependencies for skd-tree
-- **g++ / gcc** – version 13 or higher
--  **AVX-512** – CPU must support AVX-512 instructions
-- **Armadillo** – [Armadillo](https://arma.sourceforge.net/)
-- **ensmallen** – [ensmallen](https://github.com/mlpack/ensmallen)
+- **GCC/G++**: Version 13
+- **Boost**: Version 1.74.0 or higher
 
 ## Build Benchmark
 All indices in this repository are **header-only** (`.hpp`) files.  
