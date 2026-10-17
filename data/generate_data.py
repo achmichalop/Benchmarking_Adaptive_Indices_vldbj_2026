@@ -10,6 +10,15 @@ from scipy.stats import skewnorm
 from pathlib import Path
 import os
 
+os.mkdir("points")
+os.mkdir("points/datasets")
+os.mkdir("points/queries")
+
+os.mkdir("shapes")
+os.mkdir("shapes/datasets")
+os.mkdir("shapes/queries")
+
+
 pointsDatasetsPath = Path(__file__).resolve().parent / "points" / "datasets"
 pointsQueriesPath = Path(__file__).resolve().parent / "points" / "queries/"
 shapesDatasetsPath = Path(__file__).resolve().parent / "shapes" / "datasets"
