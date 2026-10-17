@@ -82,70 +82,32 @@ cd data
 python3 generate_data.py
 ```
 ## Compilation
-Each of the four directories (`range_queries/point_data/`, `range_queries/shape_data/`, `kNN_queries/`, and `mixed_queries/`) contains a bash script named `make_executables.sh`. The script compiles the executables for all indices included in the corresponding directory and stores them in a common `bin_2d/` subdirectory. For example:
+Each of the four directories (`range_queries/point_data/`, `range_queries/shape_data/`, `kNN_queries/`, and `mixed_queries/`) contains a bash script named `make_executables.sh`. The script compiles the executables for all indices included in the corresponding directory and stores them in a common `bin_2d/` subdirectory. For example, to build the executables of the indices for range queries on point data, execute:
 ```bash
 cd range_queries/point_data
 chmod 777 make_executables.sh
 ./make_executables.sh
 ```
-## Run Experiments
-### 1. Prepare Data
-## Data Preparation
 
-We provide a script to generate the three main synthetic datasets—Uniform, Clustered, and Skewed—each containing 20 million two-dimensional records. 
-```bash
-cd data
-python3 create_data.py
-```
-The script generates the following folders:
-- **datasets/** - containing the initial datasets
-- **range_queries/** and **knn_queries/** - each containing 20 queries for every dataset
+## Running Experiments
+Each of the four directories (`range_queries/point_data/`, `range_queries/shape_data/`, `kNN_queries/`, and `mixed_queries/`) contains a Bash script named `runexpe.sh`. The script uses the executables in the `bin_2d/` subdirectory to run all combinations of datasets and query access patterns for the indices involved in the corresponding workload. The results are stored in a `results_2d/` subdirectory, organized into nested directories according to the dataset and query access pattern.
 
-### 2. Run Queries
-Once the datasets and benchmark executable are ready, you can run queries for each index.
-
-#### 2.1 Range and kNN Queries
-For **range queries** the selectivity is set to 0.001%. For **knn queries** each point is evaluated for different k values (k=1,5,10,50,100,500).
-
-The general command format is:
+For example, to run the experiments for range queries on point data, execute:
 
 ```bash
-# General command format
-./bin/bench_<n>d <index> <dataset_fname> <num_points> <queries_fname> <num_queries> range
-./bin/bench_<n>d <index> <dataset_fname> <num_points> <queries_fname> <num_queries> knn
+cd range_queries/point_data
+chmod 777 runexpe.sh
+./runexpe.sh
 ```
 
-Example usage:
+After execution, the results are organized as follows:
 
-```bash
-# Run range queries for a 4-dimensional dataset
-./bin/bench_4d skdtree ../data/datasets/20M_4D_uniform.bin 20000000 ../data/range_queries/20M_4D_uniform_range_queries.txt 20 range
-
-# Run kNN queries for a 4-dimensional dataset
-./bin/bench_4d skdtree ../data/datasets/20M_4D_uniform.bin 20000000 ../data/knn_queries/20M_4D_uniform_knn_queries.txt 20 knn
+```text
+results_2d/
+├── Clustered/
+├── Sequential/
+├── Skewed/
+├── Uniform/
+└── ZoomIn/
 ```
-##### Notes:
-- Replace `<n>` with the dataset dimensionality
-- Replace `<index>` with the index you want to test (e.g., skdtree)
-- Adjust `<num_points>` and `<num_queries>` if using custom datasets/queries.
-
-#### 2.2 Mixed Workload
-The benchmark also supports a **mixed workload**, which combines dynamic updates (**insertions** and **deletions**) with an equal number of **range** and **knn queries**, as described in the paper.
-
-The general command format is:
-```bash
-./bin/bench_<n>d_mixed <index> <dataset_fname> <num_points> <update_ratio> <range_queries> <knn_queries> <num_queries> 
-```
-Example usage:
-```bash
-# Run a mixed workload for a 4-dimensional dataset
-./bin/bench_4d_mixed skdtree ../data/datasets/20M_4D_uniform.bin 20000000 0.1 ../data/range_queries/20M_4D_uniform_range_queries.txt ../data/knn_queries/20M_4D_uniform_knn_queries.txt 20 
-```
-
-
-
-
-
-
-# Benchmarking_Adaptive_Indices_vldbj_2026
-
+Each directory contains the experimental results for the corresponding scenario.
