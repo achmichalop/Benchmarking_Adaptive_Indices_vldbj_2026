@@ -81,19 +81,12 @@ We provide a script to generate the three main synthetic datasets —Uniform, Cl
 cd data
 python3 generate_data.py
 ```
-
-### Compilation
-Once all dependencies are installed and `CMakeLists.txt` is configured, you can build the benchmark with the following commands:
-
+## Compilation
+Each of the four directories (`range_queries/point_data/`, `range_queries/shape_data/`, `kNN_queries/`, and `mixed_queries/`) contains a bash script named `make_executables.sh`. The script compiles the executables for all indices included in the corresponding directory and stores them in a common `bin_2d/` subdirectory. For example:
 ```bash
-# Create a build directory and navigate into it
-mkdir build && cd build
-
-# Generate the build files with CMake
-cmake ..
-
-# Compile the project
-make
+cd range_queries/point_data
+chmod 777 make_executables.sh
+./make_executables.sh
 ```
 ## Run Experiments
 ### 1. Prepare Data
