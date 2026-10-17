@@ -59,7 +59,7 @@ The repository includes implementations of existing indices and our own implemen
 - **AKD-based and QUASII**: Based on the [Multidimensional Adaptive & Progressive Indexes](https://ir.cwi.nl/pub/31298/31298.pdf) and [source code](https://github.com/pdet/MultidimensionalAdaptiveIndexing).
 - **AVtree**: Based on the [AdaptiveIndexinginHigh-DimensionalMetricSpaces](https://www.vldb.org/pvldb/vol16/p2525-mamoulis.pdf) and [source code](https://github.com/DinosL/AVtree).
 - **KDtree**: Based on the [nanoﬂann: A Header-Only KD-Tree Library for ExactNearest-Neighbor Search on Compile-Time Product Manifolds](https://www.researchgate.net/publication/415749675_nanoflann_A_Header-Only_KD-Tree_Library_for_Exact_Nearest-Neighbor_Search_on_Compile-Time_Product_Manifolds) and [source code](https://github.com/jlblancoc/nanoflann).
-- **Rtree**: Based on the [Boost.Geometry library](https://www.boost.org/doc/libs/release/libs/geometry/doc/html/index.html).
+- **Rtree**: Based on the [Boost C++ Libraries](http://www.boost.org/).
 
 ### Our Implementations
 
