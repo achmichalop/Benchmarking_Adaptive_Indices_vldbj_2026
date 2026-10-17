@@ -8,9 +8,9 @@ The directory structure is as follows:
 ## Repository Structure
 
 ```text
-range/
-├── points/
-│   ├── AIR/
+range_queries/
+├── point_data/
+│   ├── AIR/ [paper](url)
 │   ├── AAKD/
 │   ├── AKD/
 │   └── QUASII/
