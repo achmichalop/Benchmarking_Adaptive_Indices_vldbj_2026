@@ -16,6 +16,18 @@ range/
     ├── AKD/
     └── QUASII/
 
+knn/
+├── AIR/
+├── AAKD/
+├── AKD/
+└── QUASII/
+
+mixed/
+├── AIR/
+├── AAKD/
+├── AKD/
+└── QUASII/
+
 ## List of Competitor Indices
 This repository includes implementations of all indices that are compared against **skd-tree** in the experimental evaluation of the paper:
 - **kd-tree**
