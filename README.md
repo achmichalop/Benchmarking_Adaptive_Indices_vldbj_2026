@@ -8,15 +8,22 @@ The directory structure is as follows:
 ```text
 range_queries/
 ├── point_data/
-│   ├── AIR/ [paper](url)
 │   ├── AAKD/
-│   ├── AKD/
-│   └── QUASII/
+│   ├── AIR/
+│   ├── AKD-based_and_QUASII/
+│   ├── AVtree/
+│   ├── CGI+AAKD/
+│   ├── Irregular_CGI+AAKD/
+│   ├── Irregular_Grid/
+│   ├── KDtree/
+│   ├── Rtree/
+│   └── Uniform_Grid/
 └── shapes/
     ├── AIR/
     ├── AAKD/
     ├── AKD/
     └── QUASII/
+
 
 knn/
 ├── AIR/
