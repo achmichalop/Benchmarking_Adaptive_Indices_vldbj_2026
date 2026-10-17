@@ -1,5 +1,20 @@
 # Benchmarking Adaptive Multidimensional Indices for Range and kNN queries
-This repository is an extension of the VLDB 2025 repository  and contains the code and resources used to reproduce the experiments presented in the paper. The source code for the **skd-tree** index, which is the main method introduced in the paper, is located at `/indices/nonlearned/skdtree`.
+This repository contains the code and resources required to reproduce the experiments presented in the paper. It extends the codebase of the VLDB 2025 paper, [Benchmarking Adaptive Multidimensional Indices](https://github.com/DinosL/BenchmarkingAdaptiveIndexes), with additional implementations and experiments introduced in this extended version.
+
+## Repository Structure
+The evaluated indices are organized into directories according to the query workloads they support. For range queries, both point and shape data are used, whereas kNN and mixed workloads (combining range and kNN queries) use only point data.
+The directory structure is as follows:
+range/
+├── points/
+│   ├── AIR/
+│   ├── AAKD/
+│   ├── AKD/
+│   └── QUASII/
+└── shapes/
+    ├── AIR/
+    ├── AAKD/
+    ├── AKD/
+    └── QUASII/
 
 ## List of Competitor Indices
 This repository includes implementations of all indices that are compared against **skd-tree** in the experimental evaluation of the paper:
