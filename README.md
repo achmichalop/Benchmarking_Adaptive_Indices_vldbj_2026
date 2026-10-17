@@ -75,8 +75,7 @@ The following indices are implemented by us:
 - **Boost**: Version 1.74.0 or higher
 
 ## Data Preparation
-
-We provide a script to generate the three main synthetic datasets—Uniform, Clustered, and Skewed—each containing 20 million two-dimensional records, using the parameters specified in the paper. The script also generates the range and kNN query workloads, following the access patterns described in the paper.
+We provide a script to generate the three main synthetic datasets —Uniform, Clustered, and Skewed— each containing 20 million two-dimensional records, using the parameters specified in the paper. The script also generates the range and kNN query workloads, following the access patterns described in the paper.
 
 ```bash
 cd data
