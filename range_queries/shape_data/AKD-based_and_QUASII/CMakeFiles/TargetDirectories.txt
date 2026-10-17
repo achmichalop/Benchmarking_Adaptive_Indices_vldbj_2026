@@ -1,0 +1,4 @@
+/media/lab_pc1/3a1af240-903d-44a9-80d1-c9f662b86816/BenchmarkingAdaptiveIndices_extension/range_queries/shape_data/AKD-based_and_QUASII/CMakeFiles/MDAI_lib.dir
+/media/lab_pc1/3a1af240-903d-44a9-80d1-c9f662b86816/BenchmarkingAdaptiveIndices_extension/range_queries/shape_data/AKD-based_and_QUASII/CMakeFiles/main.dir
+/media/lab_pc1/3a1af240-903d-44a9-80d1-c9f662b86816/BenchmarkingAdaptiveIndices_extension/range_queries/shape_data/AKD-based_and_QUASII/CMakeFiles/edit_cache.dir
+/media/lab_pc1/3a1af240-903d-44a9-80d1-c9f662b86816/BenchmarkingAdaptiveIndices_extension/range_queries/shape_data/AKD-based_and_QUASII/CMakeFiles/rebuild_cache.dir

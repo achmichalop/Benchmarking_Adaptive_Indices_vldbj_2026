@@ -1,0 +1,41 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/MDAI_lib.dir/src/helpers/column.cpp.o"
+  "CMakeFiles/MDAI_lib.dir/src/helpers/column.cpp.o.d"
+  "CMakeFiles/MDAI_lib.dir/src/helpers/cost_model.cpp.o"
+  "CMakeFiles/MDAI_lib.dir/src/helpers/cost_model.cpp.o.d"
+  "CMakeFiles/MDAI_lib.dir/src/helpers/heap.cpp.o"
+  "CMakeFiles/MDAI_lib.dir/src/helpers/heap.cpp.o.d"
+  "CMakeFiles/MDAI_lib.dir/src/helpers/measurements.cpp.o"
+  "CMakeFiles/MDAI_lib.dir/src/helpers/measurements.cpp.o.d"
+  "CMakeFiles/MDAI_lib.dir/src/helpers/predicate.cpp.o"
+  "CMakeFiles/MDAI_lib.dir/src/helpers/predicate.cpp.o.d"
+  "CMakeFiles/MDAI_lib.dir/src/helpers/query.cpp.o"
+  "CMakeFiles/MDAI_lib.dir/src/helpers/query.cpp.o.d"
+  "CMakeFiles/MDAI_lib.dir/src/helpers/table.cpp.o"
+  "CMakeFiles/MDAI_lib.dir/src/helpers/table.cpp.o.d"
+  "CMakeFiles/MDAI_lib.dir/src/helpers/workload.cpp.o"
+  "CMakeFiles/MDAI_lib.dir/src/helpers/workload.cpp.o.d"
+  "CMakeFiles/MDAI_lib.dir/src/indexes/cracking_kd_tree.cpp.o"
+  "CMakeFiles/MDAI_lib.dir/src/indexes/cracking_kd_tree.cpp.o.d"
+  "CMakeFiles/MDAI_lib.dir/src/indexes/full_scan.cpp.o"
+  "CMakeFiles/MDAI_lib.dir/src/indexes/full_scan.cpp.o.d"
+  "CMakeFiles/MDAI_lib.dir/src/indexes/full_scan_candidate_list.cpp.o"
+  "CMakeFiles/MDAI_lib.dir/src/indexes/full_scan_candidate_list.cpp.o.d"
+  "CMakeFiles/MDAI_lib.dir/src/indexes/full_scan_slow.cpp.o"
+  "CMakeFiles/MDAI_lib.dir/src/indexes/full_scan_slow.cpp.o.d"
+  "CMakeFiles/MDAI_lib.dir/src/indexes/kd_tree/kd_node.cpp.o"
+  "CMakeFiles/MDAI_lib.dir/src/indexes/kd_tree/kd_node.cpp.o.d"
+  "CMakeFiles/MDAI_lib.dir/src/indexes/kd_tree/kd_tree.cpp.o"
+  "CMakeFiles/MDAI_lib.dir/src/indexes/kd_tree/kd_tree.cpp.o.d"
+  "CMakeFiles/MDAI_lib.dir/src/indexes/quasii.cpp.o"
+  "CMakeFiles/MDAI_lib.dir/src/indexes/quasii.cpp.o.d"
+  "CMakeFiles/MDAI_lib.dir/src/indexes/quasii/slice.cpp.o"
+  "CMakeFiles/MDAI_lib.dir/src/indexes/quasii/slice.cpp.o.d"
+  "libMDAI_lib.a"
+  "libMDAI_lib.pdb"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/MDAI_lib.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

@@ -1,0 +1,12 @@
+{
+    "files.associations": {
+        "chrono": "cpp",
+        "ostream": "cpp",
+        "cstring": "cpp",
+        "cmath": "cpp",
+        "iostream": "cpp",
+        "complex": "cpp",
+        "istream": "cpp",
+        "vector": "cpp"
+    }
+}
