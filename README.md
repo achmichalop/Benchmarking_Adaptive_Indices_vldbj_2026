@@ -55,7 +55,7 @@ mixed_queries/
 
 The repository includes implementations of existing indices and our own implementations and variants. The sources of the original implementations and related papers are listed below.
 
-- **AIR**: Based on the [AdaptiveIndexingofObjects with SpatialExtent]((https://www.vldb.org/pvldb/vol16/p2248-karras.pdf)) and [source code](https://gitlab.com/adaptivertree/artree).
+- **AIR**: Based on the [AdaptiveIndexing of Objects with SpatialExtent](https://www.vldb.org/pvldb/vol16/p2248-karras.pdf) and [source code](https://gitlab.com/adaptivertree/artree).
 - **AKD-based and QUASII**: Based on the [original paper](AKD_QUASII_PAPER_URL) and [source code](AKD_QUASII_GITHUB_URL).
 - **AVtree**: Based on the [original paper](AVTREE_PAPER_URL) and [source code](AVTREE_GITHUB_URL).
 - **KDtree**: Based on the [original paper](KDTREE_PAPER_URL) and [source code](KDTREE_GITHUB_URL).
