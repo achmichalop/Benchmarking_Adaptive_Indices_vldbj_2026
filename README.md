@@ -3,11 +3,10 @@ This repository contains the code and resources required to reproduce the experi
 
 ## Repository Structure
 The evaluated indices are organized into directories according to the query workloads they support. For range queries, both point and shape data are used, whereas kNN and mixed workloads (combining range and kNN queries) use only point data.
+
 The directory structure is as follows:
 
 ```text
-range_queries/
-
 range_queries/
 ├── point_data/
 │   ├── AAKD/
@@ -72,22 +71,16 @@ The following indices are implemented by us:
 - **Uniform Grid**: Our implementation of a uniform grid index.
 
 ## Dependencies
-- **GCC/G++**: Version 13
+- **gcc/g++**: Version 13
 - **Boost**: Version 1.74.0 or higher
 
-## Build Benchmark
-All indices in this repository are **header-only** (`.hpp`) files.  
-As a result, **no individual build is required** for the indices. You can include them directly in your project or in a single benchmark executable.
+## Data Preparation
 
-### Modifications
-Before building the benchmark, you need to ensure that CMake can find the correct Boost library version.
-1. Open the `CMakeLists.txt` file in the root of the repository.
-2. Set the following variables to the correct path of your Boost 1.79.0 installation:
+We provide a script to generate the three main synthetic datasets—Uniform, Clustered, and Skewed—each containing 20 million two-dimensional records, using the parameters specified in the paper. The script also generates the range and kNN query workloads, following the access patterns described in the paper.
 
-```cmake
-set(BOOST_ROOT "PATH TO boost_1_79_0")
-set(Boost_INCLUDE_DIR "PATH TO boost_1_79_0")
-set(Boost_LIBRARY_DIR "PATH TO boost_1_79_0/stage/lib")
+```bash
+cd data
+python3 generate_data.py
 ```
 
 ### Compilation
@@ -105,7 +98,9 @@ make
 ```
 ## Run Experiments
 ### 1. Prepare Data
-We provide a script that generates uniform datasets with 20 million points for different dimensionalities (d = 2, 4, 6, 8) Both the cardinality and dimensionality of datasets can be changed. 
+## Data Preparation
+
+We provide a script to generate the three main synthetic datasets—Uniform, Clustered, and Skewed—each containing 20 million two-dimensional records. 
 ```bash
 cd data
 python3 create_data.py
