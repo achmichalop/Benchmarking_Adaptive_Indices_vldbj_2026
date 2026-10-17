@@ -5,8 +5,6 @@ This repository contains the code and resources required to reproduce the experi
 The evaluated indices are organized into directories according to the query workloads they support. For range queries, both point and shape data are used, whereas kNN and mixed workloads (combining range and kNN queries) use only point data.
 The directory structure is as follows:
 
-## Repository Structure
-
 ```text
 range_queries/
 ├── point_data/
