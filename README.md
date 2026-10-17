@@ -7,6 +7,8 @@ The directory structure is as follows:
 
 ```text
 range_queries/
+
+range_queries/
 ├── point_data/
 │   ├── AAKD/
 │   ├── AIR/
@@ -18,25 +20,57 @@ range_queries/
 │   ├── KDtree/
 │   ├── Rtree/
 │   └── Uniform_Grid/
-└── shapes/
-    ├── AIR/
+└── shape_data/
     ├── AAKD/
-    ├── AKD/
-    └── QUASII/
+    ├── AIR/
+    ├── AKD-based_and_QUASII/
+    ├── CGI+AAKD/
+    ├── Irregular_CGI+AAKD/
+    ├── Irregular_Grid/
+    ├── KDtree/
+    ├── Rtree/
+    └── Uniform_Grid/
 
-
-knn/
-├── AIR/
+kNN_queries/
 ├── AAKD/
-├── AKD/
-└── QUASII/
-
-mixed/
 ├── AIR/
+├── AKD_QUASII/
+├── AVtree/
+├── CGI+AAKD/
+├── KDtree/
+├── Rtree/
+└── Uniform_Grid/
+
+mixed_queries/
 ├── AAKD/
-├── AKD/
-└── QUASII/
+├── AIR/
+├── AKD_QUASII/
+├── CGI+AAKD/
+├── KDtree/
+├── Rtree/
+└── Uniform_Grid/
 ```
+
+## Methods and Sources
+
+The repository includes implementations of existing indices and our own implementations and variants. The sources of the original implementations and related papers are listed below.
+
+- **AIR**: Based on the [AdaptiveIndexingofObjects with SpatialExtent]([AIR_PAPER_URL](https://www.vldb.org/pvldb/vol16/p2248-karras.pdf)) and [source code](https://gitlab.com/adaptivertree/artree).
+- **AKD-based and QUASII**: Based on the [original paper](AKD_QUASII_PAPER_URL) and [source code](AKD_QUASII_GITHUB_URL).
+- **AVtree**: Based on the [original paper](AVTREE_PAPER_URL) and [source code](AVTREE_GITHUB_URL).
+- **KDtree**: Based on the [original paper](KDTREE_PAPER_URL) and [source code](KDTREE_GITHUB_URL).
+- **Rtree**: Based on the [Boost.Geometry library](https://www.boost.org/doc/libs/release/libs/geometry/doc/html/index.html).
+
+### Our Implementations
+
+The following indices are implemented by us:
+
+- **AAKD**: A variant of AKD that uses the heuristic of AIR.
+- **CGI+AAKD**: Our implementation combining CGI with AAKD.
+- **Irregular_CGI+AAKD**: Our implementation combining an irregular CGI grid with AAKD.
+- **Irregular_Grid**: Our implementation of an irregular grid index.
+- **Uniform_Grid**: Our implementation of a uniform grid index.
+
 
 ## List of Competitor Indices
 This repository includes implementations of all indices that are compared against **skd-tree** in the experimental evaluation of the paper:
